@@ -11,17 +11,58 @@
 <p class="p-class">Lorem ipsum ...</p>
 
 <script>
-    console.log("hello world from html")
-name = "Juha"
-    value = "string with double quotes " + name
-    value2 = 'string with single quotes ' + name
-    value3 = `string with backticks ${name}`
+  console.log('hello world from html');
+  // TODO: these should be defined by using let or const keywords
+  name = 'Juha';
+  value = 'string with double quotes ' + name;
+  value2 = 'string with single quotes ' + name;
+  value3 = `string with backticks ${name}`;
 
-    console.log(name, value, value2, value3)
-    console.log(name)
-    console.log(value)
-    console.log(value2)
-    console.log(value3)
+  console.log(name, value, value2, value3);
+  console.log(name);
+  console.log(value);
+  console.log(value2);
+  console.log(value3);
+
+  const age = 23;
+  const ageStr = age.toString();
+
+  const cabinClass = prompt('Enter the cabin class (A/B/C).');
+  switch (cabinClass) {
+    case 'A':
+      console.log('Top deck cabin with window.');
+      break;
+    case 'B':
+      console.log('Top deck cabin without window.');
+      break;
+    case 'C':
+      console.log('Windowless cabin under the car deck.');
+      break;
+    default:
+      console.log('Invalid cabin class.');
+  }
+
+
+  const cabinClass = prompt('Enter the cabin class (A/B/C).');
+  if (cabinClass === 'A') {
+    console.log('Top deck cabin with window.');
+  }else if(cabinClass === 'B') {
+      console.log('Top deck cabin without window.');
+  }else if(cabinClass === 'C') {
+    console.log('Windowless cabin under the car deck.');
+  } else {
+      console.log('Invalid cabin class.');
+  }
+
+
+  // does not work, querySelectorAll() returns an array (list) of elements
+  document.querySelectorAll("p").innerHTML = "Change all at once"
+
+
+  document.querySelector("p").innerHTML = "Change first paragraph element content"
+  document.querySelector("#p2").innerHTML = "Change paragraph with id p2 element content"
+  document.querySelector(".p-class").innerHTML = "Change paragraph with class p-class element content"
+
 </script>
 </body>
 </html>
