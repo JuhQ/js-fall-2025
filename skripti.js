@@ -1,0 +1,1 @@
+console.log("console log komento external javascript tiedostosta")
